@@ -1,4 +1,4 @@
-import * as DecksController from "../decks";
+import * as DecksController from "../../src/controllers/decks";
 
 describe("Decks.createDeck", () => {
   it("should have a createDeck function", () => {
