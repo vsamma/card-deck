@@ -1,8 +1,10 @@
 import { Router } from "express";
 import { DecksController } from "../controllers/decks-controller";
+import { DecksRepository } from "../repositories/decks-repository";
 
 const router = Router();
-const decksController = new DecksController();
+const decksRepository = new DecksRepository();
+const decksController = new DecksController(decksRepository);
 
 router.post("/", decksController.createDeck);
 

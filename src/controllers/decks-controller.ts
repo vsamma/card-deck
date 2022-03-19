@@ -34,10 +34,6 @@ export class DecksController {
 
     res.status(201).send(created);
   };
-
-  public wtf() {
-    console.log("WTF?");
-  }
 }
 
 // export const createDeck: RequestHandler = (req, res, next) => {
