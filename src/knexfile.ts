@@ -1,5 +1,3 @@
-// import Config from 'knex';
-
 const knexFile = {
   development: {
     client: "mysql",

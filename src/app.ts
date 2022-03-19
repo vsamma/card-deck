@@ -1,6 +1,7 @@
 import express, { NextFunction, Request, Response } from "express";
 import deckRoutes from "./routes/decks";
 import Knex from "knex";
+
 import { Model } from "objection";
 import * as knexFile from "./knexfile";
 // import knexConfig from './knexfile2';
@@ -39,9 +40,7 @@ app.listen(port, () => {
 //      filename: ':memory:'
 //    }
 //  });
-
-const knex = Knex(knexFile.development);
+const config = knexFile.development;
+const knex = Knex(config);
 
 Model.knex(knex);
-
-console.log(knex.raw("show tables;"));
